@@ -1,0 +1,17 @@
+@import "../../ui/shared";
+.trackShipmentMain {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: $gap;
+  input {
+    text-align: center;
+    border: $accentLinesThickness solid $accent;
+    border-radius: $borderRadius;
+    padding: calc($hPadding * 0.5) $hPadding;
+  }
+  a {
+    @include button;
+  }
+}

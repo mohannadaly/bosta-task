@@ -1,0 +1,22 @@
+@import "../../ui/shared";
+.supportCta {
+  @include flex-row;
+  @include card;
+  gap: $gap;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  article {
+    text-align: center;
+    h1 {
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .ctaButton {
+      @include button;
+      padding-inline: 0;
+      padding-block: calc(0.25 * $hPadding);
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import "/src/ui/shared";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: {
+    family: "Cairo", sans-serif;
+    weight: 500;
+  }
+  color: $primary;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  height: 100dvh;
+  //padding: 0px 100px;
+}
+
+.rtl {
+  direction: rtl;
+}

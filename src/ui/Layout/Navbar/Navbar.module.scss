@@ -1,0 +1,95 @@
+@import "../../shared";
+
+.navbar {
+  @include flex-row;
+  justify-content: space-between;
+  padding: $hPadding ($hPadding * 5);
+  margin-bottom: 30px;
+  border-bottom: $accent $accentLinesThickness solid;
+  font-weight: 700;
+  background-color: white;
+  .primaryLinks {
+    @include flex-row;
+    gap: 50px;
+    font-weight: inherit;
+    li {
+      font-weight: inherit;
+      a {
+        font-weight: inherit;
+      }
+    }
+  }
+  .secondaryLinks {
+    @include flex-row;
+    position: relative;
+    gap: 10px;
+    font-weight: inherit;
+    li {
+      font: inherit;
+      a,
+      button {
+        font-weight: inherit;
+      }
+    }
+
+    .trackingLink {
+      .miniSearchWindow {
+        @include card;
+        background-color: white;
+        position: absolute;
+        transform: translateY(calc(50% - $hPadding - 25%));
+        opacity: 0;
+        transition: all 0.25s ease;
+        h1 {
+          margin-bottom: $hPadding;
+        }
+        .trackingNumberField {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          min-width: 0;
+          border-radius: $borderRadius;
+          border: $accentLinesThickness solid $accent;
+          height: 100%;
+          input {
+            padding-inline: $hPadding;
+            padding-block: 0.5 * $hPadding;
+          }
+          a {
+            @include button;
+            border-start-start-radius: 0;
+            border-end-start-radius: 0;
+            img {
+              height: 25px;
+              aspect-ratio: 1;
+            }
+          }
+        }
+      }
+      &:hover .miniSearchWindow {
+        transform: translateY(calc(50% - $hPadding));
+        opacity: 1;
+      }
+      .shown {
+        transform: translateY(calc(50% - $hPadding));
+        opacity: 1;
+      }
+    }
+
+    .separator {
+      display: inline-block;
+      width: $accentLinesThickness;
+      height: 30px;
+      background-color: $accent;
+    }
+    .languageSwitch {
+      color: $secondary;
+      button {
+        color: inherit;
+        background-color: transparent;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
