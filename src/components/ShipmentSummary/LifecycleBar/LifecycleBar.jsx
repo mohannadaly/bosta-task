@@ -66,7 +66,7 @@ function LifecycleBar() {
               }`}
             >
               {stateIds[currentState] <= stateIds[element.stateName] &&
-              stateIds[currentState] !== 4 ? (
+              stateIds[currentState] < 7 ? (
                 <img
                   src={element.imgSrc}
                   alt={
