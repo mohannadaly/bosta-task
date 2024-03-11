@@ -28,7 +28,7 @@ function MiniSearchWindow() {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />
-        <Link reloadDocument to={`/track/${trackingNumber}`}>
+        <Link to={`/track/${trackingNumber}`}>
           <img src={Search} alt="search icon" />
         </Link>
       </div>

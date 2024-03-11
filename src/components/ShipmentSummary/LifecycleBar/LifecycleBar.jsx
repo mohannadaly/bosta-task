@@ -30,12 +30,17 @@ function LifecycleBar() {
   const stateIds = {
     TICKET_CREATED: 1,
     PACKAGE_RECEIVED: 2,
-    OUT_FOR_DELIVERY: 3,
-    DELIVERED: 4,
+    NOT_YET_SHIPPED: 3,
+    IN_TRANSIT: 4,
+    OUT_FOR_DELIVERY: 5,
+    WAITING_FOR_CUSTOMER_ACTION: 6,
+    DELIVERED: 7,
+    DELIVERED_TO_SENDER: 8,
+    CANCELLED: 9,
   };
 
   const currentState =
-    state !== "CANCELLED"
+    stateIds[state] !== undefined
       ? state
       : transitEvents[transitEvents.length - 1].state;
 
@@ -64,7 +69,9 @@ function LifecycleBar() {
               stateIds[currentState] !== 4 ? (
                 <img
                   src={element.imgSrc}
-                  alt={transitEvents[element.stateName][currentLanguage]}
+                  alt={
+                    transitEventsMessages[element.stateName][currentLanguage]
+                  }
                   className={styles.stateIcon}
                 />
               ) : (
