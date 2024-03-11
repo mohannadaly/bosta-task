@@ -76,7 +76,7 @@ const LocalizationDictionary = {
       },
       PACKAGE_RECEIVED: {
         en: "Shipment Received",
-        ar: "تم إستلام الشحنة",
+        ar: "تم إستلام الشحنة من التاجر",
       },
       IN_TRANSIT: {
         en: "Shipment it's way",
@@ -84,7 +84,7 @@ const LocalizationDictionary = {
       },
       OUT_FOR_DELIVERY: {
         en: "Shipment out for delivery",
-        ar: "جاري تسليم الشحنة",
+        ar: "الشحنة خرجت للتسليم",
       },
       WAITING_FOR_CUSTOMER_ACTION: {
         en: "Couldn't reach customer",

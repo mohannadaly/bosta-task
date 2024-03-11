@@ -1,24 +1,12 @@
 @import "../../ui/shared";
 
 .shipmentSummary {
-  @include flex-row;
+  @include flex-column;
   @include card;
+  padding-inline: 0;
   background-color: white;
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  article {
-    @include flex-column;
-    h1 {
-      font-weight: 400;
-      font-size: 0.8rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-weight: 700;
-    }
-    &:last-child {
-      margin-inline-end: 50px;
-    }
-  }
+  gap: $gap;
 }

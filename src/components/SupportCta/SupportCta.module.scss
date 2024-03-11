@@ -14,8 +14,9 @@
     }
     .ctaButton {
       @include button;
+      display: block;
       padding-inline: 0;
-      padding-block: calc(0.25 * $hPadding);
+      padding-block: calc(0.5 * $hPadding);
       width: 100%;
     }
   }

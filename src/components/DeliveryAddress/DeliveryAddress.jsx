@@ -1,4 +1,5 @@
 import { useLocalization } from "../../context/LocalizationContext";
+import { useShipment } from "../../context/ShipmentContext";
 import styles from "./DeliveryAddress.module.scss";
 function DeliveryAddress() {
   const {
@@ -7,15 +8,13 @@ function DeliveryAddress() {
       translations: { deliveryAddress },
     },
   } = useLocalization();
+  const {
+    state: { DeliveryAddress },
+  } = useShipment();
   return (
     <article className={styles.deliveryAddress}>
       <h1>{deliveryAddress[currentLanguage]}</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-        voluptates eos cupiditate sint, deleniti inventore, error neque ut quod
-        repellendus voluptatem nam quia consectetur hic a possimus soluta,
-        sapiente sunt.
-      </p>
+      <p>{DeliveryAddress}</p>
     </article>
   );
 }

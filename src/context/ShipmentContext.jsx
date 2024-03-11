@@ -20,6 +20,7 @@ const initialState = {
   TrackingNumber: "",
   TrackingURL: "",
   SupportPhoneNumbers: ["19043"],
+  DeliveryAddress: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
   TransitEvents: [],
   CreateDate: "",
   isEditableShipment: false,

@@ -1,4 +1,5 @@
 import { useLocalization } from "../../context/LocalizationContext";
+import { useShipment } from "../../context/ShipmentContext";
 import styles from "./SupportCta.module.scss";
 import Support from "/support.svg";
 
@@ -9,14 +10,17 @@ function SupportCta() {
       translations: { gotIssues, gotIssuesCta },
     },
   } = useLocalization();
+  const {
+    state: { SupportPhoneNumbers },
+  } = useShipment();
   return (
     <article className={styles.supportCta}>
       <img src={Support} alt="CTA Art" />
       <article>
         <h1>{gotIssues[currentLanguage]}</h1>
-        <button className={styles.ctaButton}>
+        <a href={`tel:${SupportPhoneNumbers}`} className={styles.ctaButton}>
           {gotIssuesCta[currentLanguage]}
-        </button>
+        </a>
       </article>
     </article>
   );

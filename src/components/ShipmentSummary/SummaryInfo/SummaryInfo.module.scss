@@ -1,0 +1,24 @@
+@import "../../../ui/shared";
+
+.summaryInfo {
+  @include flex-row;
+  background-color: white;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: $hPadding;
+  article {
+    @include flex-column;
+    h1 {
+      font-weight: 400;
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 700;
+    }
+    &:last-child {
+      margin-inline-end: 50px;
+    }
+  }
+}
