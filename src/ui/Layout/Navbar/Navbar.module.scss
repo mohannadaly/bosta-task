@@ -8,6 +8,8 @@
   border-bottom: $accent $accentLinesThickness solid;
   font-weight: 700;
   background-color: white;
+  position: sticky;
+  top: 0;
   .primaryLinks {
     @include flex-row;
     gap: 50px;

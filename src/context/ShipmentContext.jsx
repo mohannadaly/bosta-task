@@ -6,8 +6,10 @@ import {
   useState,
 } from "react";
 
+const API_URL = "https://tracking.bosta.co/shipments/track";
+
 const initialState = {
-  error: "",
+  state: "",
   branch: "مدينة نصر",
   provider: "",
   CurrentStatus: {
@@ -33,6 +35,12 @@ const ShipmentContext = createContext();
 
 function reducer(state, action) {
   switch (action.type) {
+    case "loading": {
+      return { ...initialState, state: "loading" };
+    }
+    case "error": {
+      return { ...initialState, state: "error" };
+    }
     case "fetchedShipment": {
       const parsedTransiteEvents = action.payload.TransitEvents.map((item) => ({
         ...item,
@@ -46,10 +54,8 @@ function reducer(state, action) {
         ...action.payload,
         TransitEvents: parsedTransiteEvents,
         PromisedDate: promisedDate,
+        state: "loaded",
       };
-    }
-    case "failedFetch": {
-      return { ...state, error: action.payload };
     }
     case "reset": {
       return initialState;
@@ -64,11 +70,12 @@ function ShipmentProvider({ children }) {
   useEffect(() => {
     const controller = new AbortController();
     const fetchData = async function getShipment() {
-      const url = `https://tracking.bosta.co/shipments/track/${currentId}`;
+      dispatch({ type: "loading" });
+      const url = `${API_URL}/${currentId}`;
       fetch(url, { signal: controller.signal })
         .then((res) => res.json())
         .then((data) => dispatch({ type: "fetchedShipment", payload: data }))
-        .catch((err) => dispatch({ type: "dataFailed", payload: err }));
+        .catch(() => dispatch({ type: "error" }));
     };
     if (currentId !== "") {
       dispatch({ type: "reset" });

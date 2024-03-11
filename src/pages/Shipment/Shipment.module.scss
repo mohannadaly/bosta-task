@@ -3,8 +3,6 @@
   @include flex-column;
   padding: 20px 100px;
   gap: $gap;
-  align-items: flex-start;
-
   section {
     @include flex-row;
     width: 100%;
