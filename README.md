@@ -13,7 +13,7 @@
 
 ## Hosted Demo
 
-- You can find a hosted demo of this application at the following url: [Bosta Shipment Tracking](https://bosta-tracking-task.netlify.app/track "Bosta Shipment Tracking")
+- You can find a hosted demo of this application at the following url: [Bosta Shipment Tracking](https://bosta-tracking-task.netlify.app "Bosta Shipment Tracking")
 
 ## Screenshots
 
