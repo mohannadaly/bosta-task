@@ -77,7 +77,7 @@ function ShipmentProvider({ children }) {
         .then((data) => dispatch({ type: "fetchedShipment", payload: data }))
         .catch(() => dispatch({ type: "error" }));
     };
-    if (currentId !== "") {
+    if (currentId.trim() !== "") {
       dispatch({ type: "reset" });
       fetchData();
     }

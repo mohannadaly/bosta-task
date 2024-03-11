@@ -33,6 +33,7 @@ $failed: #f4050d;
   color: $accent;
   border-radius: $borderRadius;
   padding: calc($hPadding * 0.5) $hPadding;
+  text-align: center;
   cursor: pointer;
   &:hover {
     background-color: lighten($secondary, 10%);
