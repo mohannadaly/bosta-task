@@ -30,9 +30,9 @@ export default function Widget({ className, ...props }: WidgetProps) {
         <input
           ref={inputRef}
           value={value}
-          type="text"
+          type="number"
           placeholder={t('pages.track.placeholder')}
-          pattern="\d+"
+          pattern="[0-9]*"
           onChange={handleInput}
           required
         />

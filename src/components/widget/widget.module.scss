@@ -26,11 +26,12 @@
       border: 1px solid $secondary;
     }
 
-    input[type='text'] {
+    input[type='number'] {
       height: 100%;
       padding: $spacing-md;
       padding-inline-end: 3.5rem;
       border: none;
+      font-size: 1rem;
       &:focus {
         outline: none;
       }
