@@ -1,27 +1,9 @@
 import './styles.scss';
-
 import { useTranslation } from 'react-i18next';
 import { formatDate } from '../../../../util/formatDate';
-
 import { ShipmentResponse } from '../../../../types/shipment';
-import { ShipmentState, ShipmentStatus } from '../../../../types/util';
-
+import { ShipmentState } from '../../../../types/util';
 import Stage from './stage';
-
-const orderStatusClass = (state: ShipmentState) => {
-  switch (state) {
-    case ShipmentState.DELIVERED:
-      return 'success';
-    case ShipmentState.ON_HOLD:
-      return 'pending';
-    case ShipmentState.RETURNED:
-      return 'pending';
-    case ShipmentState.UNDER_REVIEW:
-      return 'pending';
-    default:
-      return 'error';
-  }
-};
 
 export default function Timeline({
   shipmentDetails,
