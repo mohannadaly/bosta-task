@@ -34,14 +34,17 @@ article.page {
     font-weight: $font-medium;
     font-size: $text-md;
 
-    padding: $spacing-md;
-    padding-inline: $spacing-lg;
+    line-height: 3rem;
+
+    width: 6rem;
+    height: 3rem;
+    padding: $spacing-sm;
 
     border-radius: $border-radius * 2;
   }
 
   div.emblem {
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     overflow: hidden;
     bottom: 0;
