@@ -1,0 +1,30 @@
+@use '../../vars.scss' as *;
+@use '../../mixins.scss' as *;
+
+article.page {
+  @include flexCol();
+  justify-content: center;
+  align-items: center;
+
+  margin-top: $spacing-xl;
+
+
+  h1 {
+    font-weight: $font-bold;
+    font-size: $text-xxl;
+    color: $secondary;
+  }
+  a {
+    background-color: $secondary;
+    color: $background;
+
+    font-weight: $font-medium;
+    font-size: $text-md;
+
+    padding: $spacing-md;
+    padding-inline: $spacing-lg;
+
+    border-radius: $border-radius * 2;
+    margin-top: $spacing-lg;
+  }
+}

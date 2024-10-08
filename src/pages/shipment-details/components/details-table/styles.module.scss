@@ -1,0 +1,40 @@
+@use '../../../../vars.scss' as *;
+@use '../../../../mixins.scss' as *;
+
+.table {
+  h3 {
+    font-weight: $font-regular;
+    margin-bottom: $spacing-md;
+  }
+
+  > table {
+    width: 100%;
+
+    border-radius: $border-radius;
+    border: 1px solid $tertiary;
+    thead,
+    tbody {
+      > tr > td {
+        padding: $spacing-md;
+        padding-inline: $spacing-md;
+        // white-space: nowrap;
+        border-bottom: 1px solid $tertiary;
+        font-weight: $font-medium;
+        [dir='rtl'] &[dir='ltr'] {
+          text-align: right;
+        }
+      }
+    }
+
+    thead > tr > td {
+      color: #9da7bc;
+      font-weight: $font-medium;
+      background-color: lighten($tertiary, 15%);
+    }
+    tbody {
+      > tr:last-of-type > td {
+        border-bottom: none;
+      }
+    }
+  }
+}

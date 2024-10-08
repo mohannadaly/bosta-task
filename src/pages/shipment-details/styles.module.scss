@@ -1,0 +1,37 @@
+@use '../../vars.scss' as *;
+@use '../../mixins.scss' as *;
+
+article.page {
+  @include flexCol();
+  align-items: center;
+  gap: $spacing-md;
+  margin-block: $spacing-xl;
+
+  > .container {
+    @include flexRow();
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    width: 100%;
+    margin-top: $spacing-lg;
+
+    > :not(.side) {
+      flex: 1;
+    }
+    > .side {
+      flex-basis: 40ch;
+      @include flexCol();
+      gap: $spacing-md;
+    }
+
+    @media screen and (max-width: $screen-lg) {
+      > :not(.side) {
+        flex-basis: 100%;
+      }
+      > .side {
+        flex: 1;
+      }
+    }
+  }
+}

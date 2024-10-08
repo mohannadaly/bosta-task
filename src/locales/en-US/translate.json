@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "sales": "Contact Sales",
+    "track": "Track Your Shipment",
+    "login": "Login"
+  },
+  "pages": {
+    "error": {
+      "header": "An Error Occurred",
+      "message": "An unexpected error occurred. Please try again later.",
+      "cta": "Go Home"
+    },
+    "home": {
+      "header": "Welcome to Bosta",
+      "subheader": "Shipping done right.",
+      "cta": "Get Started"
+    },
+    "track": {
+      "header": "Track your order",
+      "subheader": "All order updates will be available through this link.",
+      "placeholder": "Tracking No."
+    },
+    "shipments": {
+      "timeline": {
+        "shipmentNo": "Shipment ID: {{ shipmentId }}",
+        "latestUpdate": "Last Updated",
+        "merchant": "Merchant Name",
+        "expectedDelivery": "Expected Delivery",
+        "stages": {
+          "created": "Shipment Created",
+          "picked": "Shipment Picked",
+          "enroute": "Shipment En Route",
+          "delivered": "Shipment Delivered",
+          "returned": "Shipment Returned",
+          "hold": "On Hold",
+          "cancelled": "Shipment Canceled",
+          "review": "Shipment Review"
+        }
+      },
+      "details": {
+        "title": "Shipment Details",
+        "header": {
+          "branch": "Branch",
+          "date": "Date",
+          "time": "Time",
+          "notes": "Notes"
+        }
+      },
+      "address": {
+        "title": "Delivery Address",
+        "floor": "Floor",
+        "apartment": "Apartment"
+      },
+      "help": {
+        "title": "Got a problem with your shipment?!",
+        "cta": "Contact Us"
+      }
+    }
+  }
+}

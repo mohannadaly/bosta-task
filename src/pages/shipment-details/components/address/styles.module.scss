@@ -1,0 +1,17 @@
+@use '../../../../vars.scss' as *;
+@use '../../../../mixins.scss' as *;
+
+section.address {
+  font-size: $text-md;
+  h3 {
+    font-weight: $font-regular;
+    margin-bottom: $spacing-md;
+  }
+  p {
+    background-color: lighten($tertiary, 15%);
+    padding: $spacing-sm;
+    padding-inline: $spacing-md;
+    border-radius: $border-radius;
+    border: 1px solid lighten($tertiary, 10%);
+  }
+}

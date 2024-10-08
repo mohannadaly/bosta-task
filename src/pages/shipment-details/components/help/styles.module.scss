@@ -1,0 +1,30 @@
+@use '../../../../vars.scss' as *;
+@use '../../../../mixins.scss' as *;
+
+section.help {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 3fr 2fr;
+  gap: $spacing-md;
+
+  padding: $spacing-md;
+  padding-inline: $spacing-lg;
+  border-radius: $border-radius;
+  border: 1px solid lighten($tertiary, 10%);
+
+  > * {
+    align-self: center;
+  }
+
+  > img {
+    grid-row-end: span 2;
+  }
+  > h3 {
+    align-self: center;
+  }
+  > button {
+    border-radius: $border-radius * 1.5;
+    font-weight: $font-medium;
+    height: 100%;
+  }
+}

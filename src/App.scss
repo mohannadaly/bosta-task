@@ -1,0 +1,69 @@
+@use './mixins.scss' as *;
+@use './vars.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+  line-height: normal;
+  background-color: $background;
+  margin: 0;
+  color: $primary;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+main.main {
+  @include flexRow();
+  justify-content: center;
+  height: 100%;
+
+  > * {
+    height: 100%;
+    width: 100%;
+    max-width: $screen-xl;
+    padding-inline: $spacing-md;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: inherit;
+  background-color: $secondary;
+  color: $background;
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $tertiary;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  background: none;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

@@ -1,0 +1,56 @@
+@use '../../mixins.scss' as *;
+@use '../../vars.scss' as *;
+
+.widget {
+  @include flexCol();
+
+  background-color: $background;
+  border-radius: $border-radius;
+  border: 1px solid $tertiary;
+  padding: $spacing-md;
+
+  label {
+    margin-bottom: $spacing-sm;
+    font-weight: $font-regular;
+  }
+
+  > section.searchField {
+    position: relative;
+    overflow: hidden;
+
+    transition: border-color 0.3s ease;
+    border-radius: $border-radius;
+    border: 1px solid $tertiary;
+
+    &:focus-within {
+      border: 1px solid $secondary;
+    }
+
+    input[type='text'] {
+      height: 100%;
+      padding: $spacing-md;
+      padding-inline-end: 3.5rem;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      z-index: 1;
+      inset-inline-end: 0;
+      top: 0;
+      height: 100%;
+      width: 2.5rem;
+
+      img {
+        cursor: pointer;
+        height: 1rem;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        vertical-align: middle;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use '../../vars.scss' as *;
+@use '../../mixins.scss' as *;
+
+article.page {
+  @include flexCol();
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: $spacing-xl;
+
+  h1 {
+    font-weight: $font-bold;
+    font-size: $text-xxl;
+    line-height: $text-xxl;
+
+    span {
+      color: $secondary;
+    }
+
+    [dir='rtl'] & {
+      margin-bottom: $spacing-md;
+    }
+  }
+  h2 {
+    font-weight: $font-regular;
+    font-size: $text-lg;
+    margin-bottom: $spacing-lg;
+  }
+  .cta {
+    background-color: $secondary;
+    color: $background;
+
+    font-weight: $font-medium;
+    font-size: $text-md;
+
+    padding: $spacing-md;
+    padding-inline: $spacing-lg;
+
+    border-radius: $border-radius * 2;
+  }
+
+  div.emblem {
+    z-index: 0;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    inset-inline-start: 0;
+    opacity: 30%;
+    > img {
+      max-height: 50dvh;
+      width: 100dvw;
+      aspect-ratio: 1 / 1;
+      translate: 50% 40%;
+
+      [dir='rtl'] & {
+        translate: -50% 40%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  article.page {
+    height: 100dvh;
+    margin: 0;
+  }
+}
