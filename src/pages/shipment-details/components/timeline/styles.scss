@@ -122,7 +122,10 @@ section.container {
       &:not(:first-of-type):not(:last-of-type) {
         > .icon.highlighted:not(.done) {
           &::after {
-            translate: 50% 0%;
+            translate: -50% 0%;
+            [dir='rtl'] & {
+              translate: 50% 0%;
+            }
           }
         }
       }
@@ -132,7 +135,10 @@ section.container {
           justify-content: flex-start;
           &.highlighted:not(.done)::after {
             scale: 1.5 1;
-            translate: -25% 0%;
+            translate: 25% 0%;
+            [dir='rtl'] & {
+              translate: -25% 0%;
+            }
             z-index: 1;
             background-color: transparent;
           }
