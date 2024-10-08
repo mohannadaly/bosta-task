@@ -34,7 +34,8 @@ article.page {
       border: none;
       background: none;
 
-      width: 50%;
+      width: 40%;
+      max-width: 65ch;
 
       label {
         display: none;
@@ -49,6 +50,11 @@ article.page {
         input {
           width: calc(100% - 4.5rem);
         }
+      }
+
+      @media screen and (width <= #{$screen-md}) {
+        max-width: none;
+        width: 70%;
       }
     }
   }
