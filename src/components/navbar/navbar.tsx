@@ -51,6 +51,9 @@ export default function Navbar() {
         !navbarToggleRef.current.contains(e.target as Node)
       ) {
         setNavbarExpanded(false);
+        setShowWidget(false);
+        setFocused(false);
+        setTimeout(() => setRenderWidget(false), 100);
       }
     };
 
@@ -73,7 +76,11 @@ export default function Navbar() {
         />
       </button>
       <nav className={`navbar ${navbarExpanded ? 'expanded' : ''}`}>
-        <Link to="https://bosta.co" className="logo" onClick={() => setNavbarExpanded(false)}>
+        <Link
+          to="https://bosta.co"
+          className="logo"
+          onClick={() => setNavbarExpanded(false)}
+        >
           <img
             className="logo"
             src={`/logo/${currentLanguage}.svg`}
@@ -83,7 +90,9 @@ export default function Navbar() {
 
         <ul className="navItems">
           <li className="navItem">
-            <NavLink to="/" onClick={() => setNavbarExpanded(false)}>{t('navbar.home')}</NavLink>
+            <NavLink to="/" onClick={() => setNavbarExpanded(false)}>
+              {t('navbar.home')}
+            </NavLink>
           </li>
 
           <li className="navItem">
