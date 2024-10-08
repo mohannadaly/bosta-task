@@ -19,6 +19,7 @@ export default function Navbar() {
 
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
+    setNavbarExpanded(false);
   };
 
   const handleMouseEnter = () => {
@@ -72,7 +73,7 @@ export default function Navbar() {
         />
       </button>
       <nav className={`navbar ${navbarExpanded ? 'expanded' : ''}`}>
-        <Link to="https://bosta.co" className="logo">
+        <Link to="https://bosta.co" className="logo" onClick={() => setNavbarExpanded(false)}>
           <img
             className="logo"
             src={`/logo/${currentLanguage}.svg`}
@@ -82,7 +83,7 @@ export default function Navbar() {
 
         <ul className="navItems">
           <li className="navItem">
-            <NavLink to="/">{t('navbar.home')}</NavLink>
+            <NavLink to="/" onClick={() => setNavbarExpanded(false)}>{t('navbar.home')}</NavLink>
           </li>
 
           <li className="navItem">
@@ -100,6 +101,7 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnter}
               className={`${showWidget ? 'active' : ''}`}
               to="/track"
+              onClick={() => setNavbarExpanded(false)}
             >
               {t('navbar.track')}
             </NavLink>
