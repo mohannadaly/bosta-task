@@ -36,7 +36,7 @@ section.container {
       h3 {
         font-weight: $font-regular;
         font-size: $text-sm;
-        color: $tertiary;
+        color: darken($tertiary, 20%);
       }
       p {
         font-weight: $font-bold;
