@@ -9,16 +9,15 @@
 - **Bundler:** Vite
 - **Framework:** React.JS
 - **CSS Preprocessor:** Sass
-- **State Management:** React Context API
+- **Remote State Management:** React/Tanstack Query
 
 ## Hosted Demo
 
 - You can find a hosted demo of this application at the following url: [Bosta Shipment Tracking](https://bosta-tracking-task.netlify.app "Bosta Shipment Tracking")
 
-## Screenshots
+## Demo
+### Mobile Demo
+https://github.com/user-attachments/assets/29503bca-79b1-469c-95fd-33722febcb05
+### Desktop Demo
+https://github.com/user-attachments/assets/440461e6-cd91-4f20-8f6d-212ea27845e7
 
-![](https://raw.githubusercontent.com/mohannadaly/bosta-task/main/screenshots/1.png)
-![](https://raw.githubusercontent.com/mohannadaly/bosta-task/main/screenshots/2.png)
-![](https://raw.githubusercontent.com/mohannadaly/bosta-task/main/screenshots/3.png)
-![](https://raw.githubusercontent.com/mohannadaly/bosta-task/main/screenshots/4.png)
-![](https://raw.githubusercontent.com/mohannadaly/bosta-task/main/screenshots/5.png)
